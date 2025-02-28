@@ -21,3 +21,6 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+/.direnv/
+/.projectile-cache.eld
+/_ide_helper.php
