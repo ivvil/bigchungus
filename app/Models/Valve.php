@@ -11,11 +11,31 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 /**
+ * 
  *
- *
+ * @property string $valve_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string $location
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Event> $events
+ * @property-read int|null $events_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Schedule> $schedules
+ * @property-read int|null $schedules_count
+ * @property-read \App\Models\Status|null $status
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Zone> $zones
+ * @property-read int|null $zones_count
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve whereLocation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve whereValveId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve withoutTrashed()
  * @mixin \Eloquent
  */
 class Valve extends Model

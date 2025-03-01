@@ -12,7 +12,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Roboto Condensed', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 'blue': '#00429E',
