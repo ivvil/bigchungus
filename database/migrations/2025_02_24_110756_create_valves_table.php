@@ -6,14 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    protected $connection = 'app';
+
     /**
      * Run the migrations.
      */
     public function up(): void
     {
         Schema::create('valves', function (Blueprint $table) {
-            $table->id();
+            $table->string('valve_id')->primary();
             $table->timestamps();
+            $table->string('location');
+            $table->softDeletes();
         });
     }
 

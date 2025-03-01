@@ -13,17 +13,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('statuses', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('status');
+        Schema::create('valve_zone', function (Blueprint $table) {
             $table->string('valve_id');
+            $table->unsignedBigInteger('zone_id');
 
             $table->foreign('valve_id')
                 ->references('valve_id')
-                ->on('valves')
+                ->on('zones')
                 ->cascadeOnDelete();
-            $table->index('status');
+
+            $table->foreign('zone_id')
+                ->references('id')
+                ->on('zones')
+                ->cascadeOnDelete();
         });
     }
 
@@ -32,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('statuses');
+        Schema::dropIfExists('valve_zone_pivot');
     }
 };

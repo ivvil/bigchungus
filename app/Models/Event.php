@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\MassPrunable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  *
@@ -23,11 +24,10 @@ class Event extends Model
         return static::where('created_at', '<=', now()->subMonth());
     }
 
-    private $fillable = [
+    protected $fillable = [
         'type',
         'time',
         'description',
-        'tiggerer',
     ];
 
     protected function casts(): array
@@ -37,7 +37,10 @@ class Event extends Model
         ];
     }
 
-
+    public function triggerer(): BelongsTo
+    {
+        return $this->belongsTo(Valve::class);
+    }
 
     protected $connection = 'app';
 }

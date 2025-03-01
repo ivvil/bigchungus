@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    protected $connection = 'app';
+
     /**
      * Run the migrations.
      */
@@ -14,6 +16,10 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('type');
+            $table->timestampTz('time');
+            $table->string('description');
+            $table->foreignId('triggerer_id')->constrained('valves')->cascadeOnDelete();
         });
     }
 
