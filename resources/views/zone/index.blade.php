@@ -1,11 +1,13 @@
 <x-app-layout>
-    <div class="flex justify-between">
-        <h2>Zones</h2>
-        <button class="bg-green border-4 boder-black" href="/new">NEW ZONE</button>
-    </div>
-    <div class="flex flex-wrap gap-3">
-        @foreach ($zones as $zone)
-            <x-card-simpl :title="$zone->title" :body="$zone->description" />
-        @endforeach
+    <div class="m-20">
+        <div class="flex justify-between">
+            <h2 class="pb-10">Zones</h2>
+            <button class="bg-green border-4 boder-black p-1 h-10" href="/new">NEW ZONE</button>
+        </div>
+        <div class="flex flex-wrap gap-3">
+            @foreach ($zones as $zone)
+                <x-card-simpl :title="$zone->name" :body="$zone->description" />
+            @endforeach
+        </div>
     </div>
 </x-app-layout>
