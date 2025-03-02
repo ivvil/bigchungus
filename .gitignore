@@ -24,3 +24,4 @@ yarn-error.log
 /.direnv/
 /.projectile-cache.eld
 /_ide_helper.php
+/.phpstorm.meta.php

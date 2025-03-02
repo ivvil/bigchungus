@@ -11,7 +11,7 @@ class ZoneController extends Controller
     public function index()
     {
         $fields = Schema::getColumnListing('zones');
-        $rows = Zone::select($fields)->get();
-        return view('zone.index', compact('zones', $rows));
+        $rows = Zone::all();
+        return view('zone.index', ['zones' => $rows]);
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ZoneController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,5 +21,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/test-component', function () {
     return view('test');
 });
+
+Route::resource('zones', ZoneController::class)
+    ->middleware('auth');
 
 require __DIR__.'/auth.php';
