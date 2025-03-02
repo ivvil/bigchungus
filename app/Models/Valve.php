@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 /**
- * 
+ *
  *
  * @property string $valve_id
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -57,17 +57,17 @@ class Valve extends Model
 
     public function zones(): BelongsToMany
     {
-        return $this->belongsToMany(Zone::class);
+        return $this->belongsToMany(Zone::class, 'valve_zone', 'valve_id', 'zone_id');
     }
 
     public function status(): HasOne
     {
-        return $this->hasOne(Status::class);
+        return $this->hasOne(Status::class, 'valve_id');
     }
 
     public function events(): HasMany
     {
-        return $this->hasMany(Event::class);
+        return $this->hasMany(Event::class, 'valve_id', 'triggerer_id');
     }
 
     public function schedules(): MorphMany

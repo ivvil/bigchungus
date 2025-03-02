@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -32,6 +33,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class Event extends Model
 {
+    use HasFactory;
     use MassPrunable;
 
     function prunable(): Builder
@@ -54,7 +56,7 @@ class Event extends Model
 
     public function triggerer(): BelongsTo
     {
-        return $this->belongsTo(Valve::class);
+        return $this->belongsTo(Valve::class, 'triggerer_id', 'valve_id');
     }
 
     protected $connection = 'app';

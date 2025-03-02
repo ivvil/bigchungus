@@ -19,7 +19,12 @@ return new class extends Migration
             $table->string('type');
             $table->timestampTz('time');
             $table->string('description');
-            $table->foreignId('triggerer_id')->constrained('valves')->cascadeOnDelete();
+
+            $table->string('triggerer_id');
+            $table->foreign('triggerer_id')
+                ->references('valve_id')
+                ->on('valves')
+                ->cascadeOnDelete();
         });
     }
 

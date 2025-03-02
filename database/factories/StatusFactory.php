@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Enum\ValveStatus;
 use App\Models\Status;
+use App\Models\Valve;
 use Carbon\CarbonImmutable;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

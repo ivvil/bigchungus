@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property int $enabled
@@ -38,6 +39,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Schedule extends Model
 {
+    use HasFactory;
     use SoftDeletes;
 
     public $fillable = [

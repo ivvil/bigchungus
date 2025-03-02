@@ -39,7 +39,7 @@ class EventFactory extends Factory
     public function forValve(Valve $valve): static
     {
         return $this->state([
-            'triggerer_id' => $valve->valve_id,
+            'triggerer_id' => Valve::factory(),
         ]);
     }
 

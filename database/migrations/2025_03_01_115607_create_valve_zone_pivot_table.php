@@ -19,7 +19,7 @@ return new class extends Migration
 
             $table->foreign('valve_id')
                 ->references('valve_id')
-                ->on('zones')
+                ->on('valves')
                 ->cascadeOnDelete();
 
             $table->foreign('zone_id')

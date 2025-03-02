@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Model;
 use App\Enum\ValveStatus;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -29,6 +30,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class Status extends Model
 {
+    use HasFactory;
     use MassPrunable;
 
     public function prunable(): Builder
@@ -49,7 +51,7 @@ class Status extends Model
 
     public function valve(): BelongsTo
     {
-        return $this->belongsTo(Valve::class);
+        return $this->belongsTo(Valve::class, 'valve_id');
     }
 
     protected $connection = 'app';

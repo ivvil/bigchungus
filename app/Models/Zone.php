@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -50,7 +50,7 @@ class Zone extends Model
 
     public function valves(): BelongsToMany
     {
-        return $this->belongsToMany(Valve::class);
+        return $this->belongsToMany(Valve::class, 'valve_zone', 'zone_id', 'valve_id');
     }
 
     public function schedules(): MorphMany
