@@ -25,6 +25,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
  * @property-read \App\Models\Status|null $status
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Zone> $zones
  * @property-read int|null $zones_count
+ * @method static \Database\Factories\ValveFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Valve onlyTrashed()

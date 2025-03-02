@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property-read int|null $schedules_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Valve> $valves
  * @property-read int|null $valves_count
+ * @method static \Database\Factories\ZoneFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Zone newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Zone newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Zone onlyTrashed()
