@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ValveController;
 use App\Http\Controllers\ZoneController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,9 @@ Route::get('/test-component', function () {
 });
 
 Route::resource('zones', ZoneController::class)
+    ->middleware('auth');
+
+Route::resource('valve', ValveController::class)
     ->middleware('auth');
 
 require __DIR__.'/auth.php';
