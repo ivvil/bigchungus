@@ -10,12 +10,13 @@ class ValveController extends Controller
     public function index()
     {
         $rows = Valve::all();
-        return view('valve.index', ['valves' => $rows]);
+        return view('valve.index', ['first' => $rows->first()->valve_id]);
     }
 
-    public function show(Valve $v)
+    public function show(string $v)
     {
         $rows = Valve::all();
-        return view('valve.show', ['valves' => [$rows], 'expanded' => $v]);
+        $valve = Valve::whereValveId($v)->first();
+        return view('valve.show', ['valves' => $rows, 'expanded' => $valve]);
     }
 }
