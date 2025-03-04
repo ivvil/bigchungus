@@ -1,0 +1,18 @@
+#+title: Todo
+#+TODO: TODO PROG REVW BLOK | DONE
+
+
+* TODO Controladores y vistas
+** PROG Valve
+** PROG Zone
+** TODO Schedule
+** TODO Event
+** TODO Status
+* Controladores API
+** TODO Valve
+** TODO Zone
+** TODO Schedule
+** TODO Event
+** TODO Status
+* TODO Estilos y markup laravel por defecto
+* TODO Permisos
