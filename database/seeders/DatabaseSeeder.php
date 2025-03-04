@@ -33,8 +33,9 @@ class DatabaseSeeder extends Seeder
             ->withValves(3)
             ->create();
 
-        // Event::factory()
-        //     ->count(50)
-        //     ->create();
+        Event::factory()
+            ->count(50)
+            ->forValve()
+            ->create();
     }
 }

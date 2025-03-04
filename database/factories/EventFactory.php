@@ -30,13 +30,13 @@ class EventFactory extends Factory
                 'status_change'
             ]),
             'time' => CarbonImmutable::now()->subMinutes(
-                $this->faker->numberBetween(0, 43200) // Up to 30 days old
+                $this->faker->numberBetween(0, 42069)
             ),
             'description' => $this->faker->sentence(8),
         ];
     }
 
-    public function forValve(Valve $valve): static
+    public function forValve(): static
     {
         return $this->state([
             'triggerer_id' => Valve::factory(),
