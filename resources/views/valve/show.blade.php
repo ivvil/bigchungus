@@ -21,6 +21,9 @@
                     <x-dl-item title="Schedules">
                         <a>See schedules</a>
                     </x-dl-item>
+                    <x-dl-item title="Status">
+                        {{ $valve->status->status ?? "Unknown" }}
+                    </x-dl-item>
                 </x-dl>
             </div>
         </x-desc-item>

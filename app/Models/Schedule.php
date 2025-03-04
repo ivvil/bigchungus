@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- *
+ * 
  *
  * @property int $id
  * @property int $enabled
@@ -20,6 +20,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property-read Model|\Eloquent $schedulable
+ * @method static \Database\Factories\ScheduleFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Schedule newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Schedule newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Schedule onlyTrashed()

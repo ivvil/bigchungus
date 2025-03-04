@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 /**
- *
+ * 
  *
  * @property string $valve_id
  * @property \Illuminate\Support\Carbon|null $created_at

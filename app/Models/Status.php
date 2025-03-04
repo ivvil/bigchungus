@@ -10,14 +10,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- *
+ * 
  *
  * @property int $id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property ValveStatus $status
  * @property string $valve_id
- * @property-read \App\Models\Valve|null $valve
+ * @property-read \App\Models\Valve $valve
+ * @method static \Database\Factories\StatusFactory factory($count = null, $state = [])
  * @method static Builder<static>|Status newModelQuery()
  * @method static Builder<static>|Status newQuery()
  * @method static Builder<static>|Status query()

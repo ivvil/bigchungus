@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ValveController;
 use App\Http\Controllers\ZoneController;
@@ -27,6 +28,9 @@ Route::resource('zones', ZoneController::class)
     ->middleware('auth');
 
 Route::resource('valve', ValveController::class)
+    ->middleware('auth');
+
+Route::resource('event', EventController::class)
     ->middleware('auth');
 
 require __DIR__.'/auth.php';

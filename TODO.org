@@ -2,12 +2,12 @@
 #+TODO: TODO PROG REVW BLOK | DONE
 
 #+BEGIN: clocktable :scope file :maxlevel 2
-#+CAPTION: Clock summary at [2025-03-04 Tue 10:17]
+#+CAPTION: Clock summary at [2025-03-04 Tue 11:01]
 | Headline               |   Time |      |
 |------------------------+--------+------|
-| *Total time*           | *0:26* |      |
+| *Total time*           | *1:07* |      |
 |------------------------+--------+------|
-| Controladores y vistas |   0:15 |      |
+| Controladores y vistas |   0:56 |      |
 | Seeders                |   0:11 |      |
 | \_  Event              |        | 0:11 |
 #+END:
@@ -18,13 +18,14 @@
 :Effort:   1h 30min
 :END:
 :LOGBOOK:
+CLOCK: [2025-03-04 Tue 10:20]--[2025-03-04 Tue 11:01] =>  0:41
 CLOCK: [2025-03-04 Tue 09:49]--[2025-03-04 Tue 10:04] =>  0:15
 :END:
 ** PROG Valve
 ** PROG Zone
 ** TODO Schedule
-** TODO Event
-** TODO Status
+** PROG Event
+** PROG Status
 * Controladores API
 ** TODO Valve
 ** TODO Zone
@@ -34,7 +35,7 @@ CLOCK: [2025-03-04 Tue 09:49]--[2025-03-04 Tue 10:04] =>  0:15
 * TODO Estilos y markup laravel por defecto
 * TODO Permisos
 * TODO Traducciones
-* TODO Seeders
+* DONE Seeders
 ** DONE Event
 :PROPERTIES:
 :Effort:   30 min

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- *
+ * 
  *
  * @property int $id
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -17,8 +17,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property string $type
  * @property \Carbon\CarbonImmutable $time
  * @property string $description
- * @property int $triggerer_id
- * @property-read \App\Models\Valve|null $triggerer
+ * @property string $triggerer_id
+ * @property-read \App\Models\Valve $triggerer
+ * @method static \Database\Factories\EventFactory factory($count = null, $state = [])
  * @method static Builder<static>|Event newModelQuery()
  * @method static Builder<static>|Event newQuery()
  * @method static Builder<static>|Event query()
